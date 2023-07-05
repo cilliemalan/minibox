@@ -57,5 +57,5 @@ cp -a $BUSYBOX_BUILD/_install/* .
 cp $ROOT/init .
 chmod +x init
 find . -print0 | cpio --null -ov --format=newc | gzip -9 > $BUILD/initramfs.cpio.gz
-cp 
+ 
 
