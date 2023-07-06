@@ -5,7 +5,7 @@ set -e
 sudo echo 'Installing packages...'
 sudo apt update
 sudo apt dist-upgrade -y
-sudo apt install -y cpio curl texinfo help2man libtool-bin libncurses5-dev unzip python3 build-essential libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf llvm bc qemu qemu-kvm qemu-system-x86
+sudo apt install -y cpio curl texinfo help2man libtool-bin libncurses5-dev unzip python3 build-essential libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf llvm bc qemu qemu-kvm qemu-system-x86 libguestfs-tools
 sudo apt autoremove -y
 
 export ROOT=$(pwd)
