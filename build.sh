@@ -19,16 +19,17 @@ export BUSYBOX_BUILD=$BUILD/busybox
 export INITRAMFS_BUILD=$BUILD/initramfs
 mkdir -p $LINUX_BUILD $BUSYBOX_BUILD $INITRAMFS_BUILD
 
-if [ ! -f $LINUX_BUILD/.config ]
+if [ ! -f $LINUX/README ]
 then
     echo 'Downloading Linux...'
     curl -s -L 'https://github.com/torvalds/linux/archive/refs/tags/v6.4.tar.gz' | tar xz -C $SRC
 fi
-if [ ! -f $BUSYBOX_BUILD/.config ]
+if [ ! -f $BUSYBOX/README ]
 then
     echo 'Downloading busybox...'
     curl -s -L 'https://www.busybox.net/downloads/busybox-1.36.1.tar.bz2' | tar xj -C $SRC
 fi
+
 
 echo
 echo
